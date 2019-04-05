@@ -8,9 +8,7 @@
 /build
 /eclipse
 /bin
-/run
-/run_client
-/run_server
+/run*
 /.gradle
 /.settings
 /libs
