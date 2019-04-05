@@ -1,17 +1,16 @@
 *.class
-/run/
-
-# Package Files #
 *.war
 *.ear
-/build
-/eclipse
-/bin
-
 *.mtl
 *.classpath
 *.project
 *.launch
+/build
+/eclipse
+/bin
+/run
+/run_client
+/run_server
 /.gradle
 /.settings
 /libs
