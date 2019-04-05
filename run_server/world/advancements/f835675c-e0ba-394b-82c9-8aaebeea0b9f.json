@@ -1,0 +1,20 @@
+{
+  "biomesoplenty:recipes/misc/amethyst": {
+    "criteria": {
+      "has_the_recipe": "2019-04-04 15:29:07 +0300"
+    },
+    "done": true
+  },
+  "biomesoplenty:recipes/buildingblocks/amethyst_block": {
+    "criteria": {
+      "has_at_least_9_gems": "2019-04-04 15:29:07 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2019-04-04 15:28:52 +0300"
+    },
+    "done": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 6
+    }
+  },
+  "result": {
+    "item": "bopadditions:sapphire_boots"
+  }
+}

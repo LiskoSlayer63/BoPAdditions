@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 7
+    }
+  },
+  "result": {
+    "item": "bopadditions:amber_chestplate"
+  }
+}

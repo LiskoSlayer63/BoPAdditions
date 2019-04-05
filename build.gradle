@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+repositories {
+    //maven {
+    //    name 'biomesoplenty'
+    //    url 'http://blamejared.com/maven'
+    //}
+}
+
+group= "liznet.bopadditions"
+version = "1.0.0"
+archivesBaseName = "BoPAdditions"
+//bopversion = "1.12.2-7.0.1.2399"
+
+minecraft {
+    version = "1.12.2-14.23.5.2814"
+    runDir = "run"
+    mappings = "stable_39"
+}
+
+dependencies {
+	deobfCompile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:1.12.2-7.0.1.2426:universal"
+}
+
+processResources
+{
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+    
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

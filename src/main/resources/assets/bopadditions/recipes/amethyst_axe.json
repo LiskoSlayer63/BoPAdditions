@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blaze_rod"
+    },
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "bopadditions:amethyst_axe"
+  }
+}

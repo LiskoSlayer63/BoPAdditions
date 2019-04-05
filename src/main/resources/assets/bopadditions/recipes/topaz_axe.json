@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 3
+    }
+  },
+  "result": {
+    "item": "bopadditions:topaz_axe"
+  }
+}

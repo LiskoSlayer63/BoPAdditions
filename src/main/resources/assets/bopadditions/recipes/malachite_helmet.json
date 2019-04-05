@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 5
+    }
+  },
+  "result": {
+    "item": "bopadditions:malachite_helmet"
+  }
+}

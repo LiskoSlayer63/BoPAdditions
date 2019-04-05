@@ -1,0 +1,121 @@
+[15:27:50] [main/INFO] [GradleStart]: Extra: []
+[15:27:50] [main/INFO] [GradleStart]: Running with arguments: [--tweakClass, net.minecraftforge.fml.common.launcher.FMLServerTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[15:27:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[15:27:50] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[15:27:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:27:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[15:27:52] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[15:27:52] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_202
+[15:27:52] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[15:27:52] [main/ERROR] [FML]: Full: C:\Users\Ahola\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[15:27:52] [main/ERROR] [FML]: Trimmed: c:/users/ahola/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[15:27:52] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[15:27:52] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[15:27:52] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[15:27:52] [main/INFO] [FML]: Searching D:\Ahola\Documents\GitHub\BoPAdditions\run_server\.\mods for mods
+[15:27:52] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:27:52] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[15:27:52] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[15:27:52] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:27:52] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[15:27:52] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[15:27:52] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:27:52] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:27:52] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:27:56] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[15:27:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:27:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[15:27:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[15:27:57] [main/INFO] [GradleStart]: Remapping AccessTransformer rules...
+[15:27:57] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[15:27:57] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[15:27:57] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.server.MinecraftServer}
+[15:28:04] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Starting minecraft server version 1.12.2
+[15:28:04] [Server thread/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[15:28:04] [Server thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[15:28:04] [Server thread/INFO] [FML]: Replaced 1036 ore ingredients
+[15:28:05] [Server thread/INFO] [FML]: Searching D:\Ahola\Documents\GitHub\BoPAdditions\run_server\.\mods for mods
+[15:28:06] [Server thread/INFO] [FML]: Forge Mod Loader has identified 6 mods to load
+[15:28:07] [Server thread/WARN] [FML]: Missing English translation for FML: assets/fml/lang/en_us.lang
+[15:28:07] [Server thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, bopadditions, biomesoplenty] at CLIENT
+[15:28:07] [Server thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, bopadditions, biomesoplenty] at SERVER
+[15:28:09] [Server thread/INFO] [FML]: Processing ObjectHolder annotations
+[15:28:09] [Server thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[15:28:09] [Server thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[15:28:09] [Server thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[15:28:09] [Server thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[15:28:09] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[15:28:10] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: UP_TO_DATE Target: null
+[15:28:16] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:16] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:16] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:16] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:16] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:16] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:16] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:16] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:16] [Server thread/INFO] [FML]: Injecting itemstacks
+[15:28:16] [Server thread/INFO] [FML]: Itemstack injection complete
+[15:28:16] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Loading properties
+[15:28:16] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Default game type: CREATIVE
+[15:28:16] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Generating keypair
+[15:28:17] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Starting Minecraft server on *:25565
+[15:28:17] [Server thread/INFO] [net.minecraft.network.NetworkSystem]: Using default channel type
+[15:28:18] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:28:18] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[15:28:18] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:28:18] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:28:18] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:18] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:18] [Server thread/INFO] [FML]: Injecting itemstacks
+[15:28:18] [Server thread/INFO] [FML]: Itemstack injection complete
+[15:28:19] [Server thread/INFO] [FML]: Forge Mod Loader has successfully loaded 6 mods
+[15:28:19] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Preparing level "world"
+[15:28:19] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[15:28:19] [Server thread/INFO] [FML]: Applying holder lookups
+[15:28:19] [Server thread/INFO] [FML]: Holder lookups applied
+[15:28:20] [Server thread/INFO] [STDOUT]: [biomesoplenty.common.world.BiomeProviderBOP:<init>:61]: settings for world: 
+[15:28:20] [Server thread/INFO] [STDOUT]: [biomesoplenty.common.world.BiomeProviderBOP:initialLandAndSeaLayer:93]: Setting up landmass VANILLA
+[15:28:20] [Server thread/INFO] [STDOUT]: [biomesoplenty.common.world.ChunkGeneratorOverworldBOP:<init>:89]: ChunkGeneratorOverworldBOP json: 
+[15:28:20] [Server thread/INFO] [STDOUT]: [biomesoplenty.common.world.ChunkGeneratorOverworldBOP:<init>:96]: ChunkGeneratorOverworldBOP settings: {"landScheme":"vanilla","tempScheme":"medium_zones","rainScheme":"medium_zones","biomeSize":"medium","amplitude":1.0,"generateBopOre":true,"generatePoisonIvy":false,"generateBerryBushes":true,"generateThorns":true,"generateQuicksand":true,"generateLiquidPoison":true,"generateHotSprings":true,"generateNetherHives":true,"generateEndFeatures":true,"mainNoiseScaleX":80.0,"mainNoiseScaleY":160.0,"mainNoiseScaleZ":80.0,"coordinateScale":684.412,"heightScale":684.412,"upperLimitScale":512.0,"lowerLimitScale":512.0}
+[15:28:20] [Server thread/INFO] [FML]: Loading dimension 0 (world) (net.minecraft.server.dedicated.DedicatedServer@6e53c52c)
+[15:28:22] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 700 advancements
+[15:28:22] [Server thread/INFO] [FML]: Loading dimension 1 (world) (net.minecraft.server.dedicated.DedicatedServer@6e53c52c)
+[15:28:22] [Server thread/INFO] [STDOUT]: [biomesoplenty.common.world.BiomeProviderBOPHell:<init>:32]: settings for hell world: 
+[15:28:22] [Server thread/INFO] [FML]: Loading dimension -1 (world) (net.minecraft.server.dedicated.DedicatedServer@6e53c52c)
+[15:28:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[15:28:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 6%
+[15:28:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 65%
+[15:28:24] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Done (5.350s)! For help, type "help" or "?"
+[15:28:25] [Server thread/INFO] [FML]: Unloading dimension 1
+[15:28:25] [Server thread/INFO] [FML]: Unloading dimension -1
+[15:28:51] [Netty Server IO #2/INFO] [FML]: Client protocol version 2
+[15:28:51] [Netty Server IO #2/INFO] [FML]: Client attempting to join with 6 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2768,biomesoplenty@7.0.1.2426,mcp@9.42,bopadditions@1.0.0
+[15:28:52] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[15:28:52] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player719[/127.0.0.1:60334] logged in with entity id 379 at (108.5, 66.0, 261.5)
+[15:28:52] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Player719 joined the game
+[15:29:16] [Netty Server IO #2/ERROR] [FML]: NetworkDispatcher exception
+java.io.IOException: Etäpalvelin sulki aiemmin luodun yhteyden
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_202]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[?:1.8.0_202]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[?:1.8.0_202]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[?:1.8.0_202]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[?:1.8.0_202]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[PooledUnsafeDirectByteBuf.class:4.1.9.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[AbstractByteBuf.class:4.1.9.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372) ~[NioSocketChannel.class:4.1.9.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123) [AbstractNioByteChannel$NioByteUnsafe.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [SingleThreadEventExecutor$5.class:4.1.9.Final]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_202]
+[15:29:16] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player719 lost connection: Internal Exception: java.io.IOException: Etäpalvelin sulki aiemmin luodun yhteyden
+[15:29:16] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer]: Player719 left the game
+[15:29:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[15:29:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[15:29:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[15:29:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'world'/overworld
+[15:29:17] [Server thread/INFO] [FML]: Unloading dimension 0
+[15:29:17] [Server Shutdown Thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server

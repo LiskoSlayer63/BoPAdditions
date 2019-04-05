@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 6
+    }
+  },
+  "result": {
+    "item": "bopadditions:sapphire_pickaxe"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "X": {
+      "item": "biomesoplenty:gem",
+	  "data": 2
+    }
+  },
+  "result": {
+    "item": "bopadditions:peridot_hoe"
+  }
+}
