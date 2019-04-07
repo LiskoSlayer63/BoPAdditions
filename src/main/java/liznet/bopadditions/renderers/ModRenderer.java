@@ -2,6 +2,8 @@ package liznet.bopadditions.renderers;
 
 import java.lang.reflect.Field;
 import java.util.Map;
+
+import liznet.bopadditions.BOPAdditions;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.RenderItem;
@@ -12,7 +14,8 @@ import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
-public class ModRenderer {
+public class ModRenderer 
+{
 	private static boolean ENABLE_ITEM_RENDERER = true;
 	private static boolean ENABLE_ARMOR_RENDERER = true;
 	
@@ -24,12 +27,14 @@ public class ModRenderer {
 	private static Field skinMap = ObfuscationReflectionHelper.findField(RenderManager.class, "field_178636_l");
 
 	@SuppressWarnings("unchecked")
-	public static void init() {
+	public static void init() 
+	{
 		if(!ENABLE_ITEM_RENDERER && !ENABLE_ARMOR_RENDERER) return;
 		
 		Minecraft mc = Minecraft.getMinecraft();
         
-		if(ENABLE_ITEM_RENDERER) {
+		if(ENABLE_ITEM_RENDERER) 
+		{
 	        modelManager.setAccessible(true);
 	        renderItem.setAccessible(true);
 		}
@@ -39,12 +44,15 @@ public class ModRenderer {
         
         try
         {
-        	if(ENABLE_ITEM_RENDERER){
+        	if(ENABLE_ITEM_RENDERER)
+        	{
         		modRenderItem = new ModRenderItem(mc.getTextureManager(), (ModelManager) modelManager.get(mc), mc.getItemColors(), ((RenderItem)renderItem.get(mc)).getItemModelMesher());
         		renderItem.set(mc, modRenderItem);
         		itemRenderer.set(mc.getItemRenderer(), modRenderItem);
         	}
-        	if(ENABLE_ARMOR_RENDERER){
+        	
+        	if(ENABLE_ARMOR_RENDERER)
+        	{
 	            playerRenderer.set(mc.getRenderManager(), new ModRenderPlayer(mc.getRenderManager()));
 	            ((Map<String, RenderPlayer>)skinMap.get(mc.getRenderManager())).put("default", new ModRenderPlayer(mc.getRenderManager()));
 	            ((Map<String, RenderPlayer>)skinMap.get(mc.getRenderManager())).put("slim", new ModRenderPlayer(mc.getRenderManager(), true));
@@ -52,7 +60,7 @@ public class ModRenderer {
         }
         catch (IllegalArgumentException | IllegalAccessException e)
         {
-            e.printStackTrace();
+			BOPAdditions.logger.error(e);
         }
         
         if(ENABLE_ITEM_RENDERER)

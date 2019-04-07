@@ -17,8 +17,8 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-public abstract class ModLayerArmorBase<T extends ModelBase> implements LayerRenderer<EntityLivingBase> {
-	
+public abstract class ModLayerArmorBase<T extends ModelBase> implements LayerRenderer<EntityLivingBase> 
+{
 	protected static ResourceLocation ENCHANTED_ITEM_GLINT_RES = new ResourceLocation("minecraft", "textures/misc/enchanted_item_glint.png");
     protected T modelLeggings;
     protected T modelArmor;
@@ -36,7 +36,8 @@ public abstract class ModLayerArmorBase<T extends ModelBase> implements LayerRen
         this.initArmor();
     }
     
-    public void setTextureResource(ResourceLocation resourceLocation){
+    public void setTextureResource(ResourceLocation resourceLocation)
+    {
     	ENCHANTED_ITEM_GLINT_RES = resourceLocation;
     }
     

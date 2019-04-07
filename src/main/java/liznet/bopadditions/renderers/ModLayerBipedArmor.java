@@ -5,21 +5,24 @@ import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraftforge.client.ForgeHooksClient;
 
-public class ModLayerBipedArmor extends ModLayerArmorBase<ModelBiped> {
-
-	public ModLayerBipedArmor(RenderLivingBase<?> rendererIn) {
+public class ModLayerBipedArmor extends ModLayerArmorBase<ModelBiped> 
+{
+	public ModLayerBipedArmor(RenderLivingBase<?> rendererIn) 
+	{
 		super(rendererIn);
 	}
 
 	@Override
-	protected void initArmor() {
+	protected void initArmor() 
+	{
 		this.modelLeggings = new ModelBiped(0.5F);
 		this.modelArmor = new ModelBiped(1.0F);
 	}
 
 	@SuppressWarnings("incomplete-switch")
 	@Override
-	protected void setModelSlotVisible(ModelBiped p_188359_1_, EntityEquipmentSlot slotIn) {
+	protected void setModelSlotVisible(ModelBiped p_188359_1_, EntityEquipmentSlot slotIn) 
+	{
 		this.setModelVisible(p_188359_1_);
 
         switch (slotIn)

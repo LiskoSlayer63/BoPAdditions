@@ -7,10 +7,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 
-public class GemLeggings extends ItemArmor implements ICustomEnchantColor {
+public class GemLeggings extends ItemArmor implements ICustomEnchantColor 
+{
 	private String gemName;
 	
-	public GemLeggings(ModMaterial material) {
+	public GemLeggings(ModMaterial material) 
+	{
 		super(material.getArmorMaterial(), 0, EntityEquipmentSlot.LEGS);
 		super.setCreativeTab(CreativeTabs.COMBAT);
 		
@@ -21,7 +23,8 @@ public class GemLeggings extends ItemArmor implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }

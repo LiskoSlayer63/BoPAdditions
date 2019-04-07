@@ -6,10 +6,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 
-public class GemPickaxe extends ItemPickaxe implements ICustomEnchantColor {
+public class GemPickaxe extends ItemPickaxe implements ICustomEnchantColor 
+{
 	private String gemName;
 	
-	public GemPickaxe(ModMaterial material) {
+	public GemPickaxe(ModMaterial material) 
+	{
 		super(material.getToolMaterial());
 		super.setCreativeTab(CreativeTabs.TOOLS);
 		
@@ -20,7 +22,8 @@ public class GemPickaxe extends ItemPickaxe implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }

@@ -6,10 +6,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 
-public class GemAxe extends ItemAxe implements ICustomEnchantColor {
+public class GemAxe extends ItemAxe implements ICustomEnchantColor 
+{
 	private String gemName;
 
-	public GemAxe(ModMaterial material) {
+	public GemAxe(ModMaterial material) 
+	{
 		super(material.getToolMaterial(), material.name().toLowerCase().equals("amethyst") ? 12.0F : 8.0F, -3.0F);
 		super.setCreativeTab(CreativeTabs.TOOLS);
 		
@@ -20,7 +22,8 @@ public class GemAxe extends ItemAxe implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }

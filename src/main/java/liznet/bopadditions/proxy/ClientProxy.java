@@ -19,7 +19,8 @@ public class ClientProxy extends CommonProxy
 	private static Map<String, String> COLORMAP = new HashMap<String, String>();
 
 	@Override
-	public void preInit() {
+	public void preInit() 
+	{
 		super.preInit();
 		
 		COLORMAP.put("AMBER", "e08c10");
@@ -34,7 +35,8 @@ public class ClientProxy extends CommonProxy
 	}
 
 	@Override
-	public void init() {
+	public void init() 
+	{
 		super.init();
 		
 		if(ENABLE_RENDERER)
@@ -42,14 +44,16 @@ public class ClientProxy extends CommonProxy
 	}
 
 	@Override
-	public void postInit() {
+	public void postInit() 
+	{
 		super.postInit();
 	}
 	
 	// CLIENT EVENTS
 	
 	@SubscribeEvent
-	public static void registerRenders(ModelRegistryEvent event) {
+	public static void registerRenders(ModelRegistryEvent event) 
+	{
 		ModItems.registerRenders(event);
 	}
 	
@@ -79,12 +83,12 @@ public class ClientProxy extends CommonProxy
     {
         return (parColor & 255) / 255.0F;
     }
-	public static int getEffectColor(String name){
+	public static int getEffectColor(String name)
+	{
         int alpha = 0x66000000;
         
-        if(COLORMAP.containsKey(name)){
+        if(COLORMAP.containsKey(name))
 	        return alpha | Integer.parseInt(COLORMAP.get(name), 16);
-        }
 		
         return -8372020;
 	}

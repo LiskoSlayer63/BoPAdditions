@@ -13,12 +13,15 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 
-public class ModItems {
+public class ModItems 
+{
 	private static List<Item> TOOLS = new ArrayList<Item>();
 	private static List<Item> ARMORS = new ArrayList<Item>();
 	
-	public static void init() {
-		for(ModMaterial material : ModMaterials.getMaterials()){
+	public static void init() 
+	{
+		for(ModMaterial material : ModMaterials.getMaterials())
+		{
 			TOOLS.add(new GemPickaxe(material));
 			TOOLS.add(new GemAxe(material));
 			TOOLS.add(new GemSpade(material));
@@ -32,7 +35,8 @@ public class ModItems {
 		}
 	}
 	
-	public static void registerItems(RegistryEvent.Register<Item> event) {
+	public static void registerItems(RegistryEvent.Register<Item> event) 
+	{
 		for(Item tool : TOOLS)
 			event.getRegistry().register(tool);
 		
@@ -40,7 +44,8 @@ public class ModItems {
 			event.getRegistry().register(armor);
 	}
 	
-	public static void registerRenders(ModelRegistryEvent event) {
+	public static void registerRenders(ModelRegistryEvent event) 
+	{
 		for(Item tool : TOOLS)
 			ModelLoader.setCustomModelResourceLocation(tool, 0, new ModelResourceLocation(tool.getRegistryName(), "inventory"));
 		
@@ -48,7 +53,8 @@ public class ModItems {
 			ModelLoader.setCustomModelResourceLocation(armor, 0, new ModelResourceLocation(armor.getRegistryName(), "inventory"));
 	}
 	
-	public static boolean hasCustomEffect(ItemStack stack){
+	public static boolean hasCustomEffect(ItemStack stack)
+	{
 		return !stack.isEmpty() && stack.getItem() instanceof ICustomEnchantColor;
 	}
 }

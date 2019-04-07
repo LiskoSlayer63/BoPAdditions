@@ -6,10 +6,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
-public class GemSword extends ItemSword implements ICustomEnchantColor {
+public class GemSword extends ItemSword implements ICustomEnchantColor 
+{
 	private String gemName;
 	
-	public GemSword(ModMaterial material) {
+	public GemSword(ModMaterial material) 
+	{
 		super(material.getToolMaterial());
 		super.setCreativeTab(CreativeTabs.COMBAT);
 		
@@ -20,7 +22,8 @@ public class GemSword extends ItemSword implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }

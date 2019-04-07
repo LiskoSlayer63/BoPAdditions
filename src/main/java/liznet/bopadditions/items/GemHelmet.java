@@ -7,10 +7,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 
-public class GemHelmet extends ItemArmor implements ICustomEnchantColor {
+public class GemHelmet extends ItemArmor implements ICustomEnchantColor 
+{
 	private String gemName;
 	
-	public GemHelmet(ModMaterial material) {
+	public GemHelmet(ModMaterial material) 
+	{
 		super(material.getArmorMaterial(), 0, EntityEquipmentSlot.HEAD);
 		super.setCreativeTab(CreativeTabs.COMBAT);
 		
@@ -21,7 +23,8 @@ public class GemHelmet extends ItemArmor implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }

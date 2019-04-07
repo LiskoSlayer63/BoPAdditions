@@ -1,10 +1,10 @@
 package liznet.bopadditions.ai;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import javax.annotation.Nullable;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
-
 import liznet.bopadditions.BOPAdditions;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
@@ -131,7 +131,8 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
         }
     }
     
-    private boolean shouldAttackPlayer(EntityPlayer player){
+    private boolean shouldAttackPlayer(EntityPlayer player)
+    {
     	ItemStack itemstack = player.inventory.armorInventory.get(3);
 
         if (itemstack.getItem() == Item.getByNameOrId(BOPAdditions.modId + ":amethyst_helmet"))
@@ -140,9 +141,12 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
         }
         else
         {
-        	try {
+        	try 
+        	{
 				return (boolean)ModAIFindPlayer.shouldAttackPlayer.invoke(ModAIFindPlayer.this.enderman, player);
-			} catch (Exception e) {
+			} 
+        	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
+        	{
 				BOPAdditions.logger.error(e);
 				return true;
 			}
@@ -151,9 +155,12 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
     
     protected boolean teleportRandomly()
     {
-    	try {
+    	try 
+    	{
 			return (boolean)ModAIFindPlayer.teleportRandomly.invoke(ModAIFindPlayer.this.enderman);
-		} catch (Exception e) {
+		} 
+    	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
+    	{
 			BOPAdditions.logger.error(e);
 			return false;
 		}
@@ -161,9 +168,12 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
     
     protected boolean teleportToEntity(Entity entity)
     {
-    	try {
+    	try 
+    	{
 			return (boolean)ModAIFindPlayer.teleportToEntity.invoke(ModAIFindPlayer.this.enderman, entity);
-		} catch (Exception e) {
+		} 
+    	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
+    	{
 			BOPAdditions.logger.error(e);
 			return false;
 		}

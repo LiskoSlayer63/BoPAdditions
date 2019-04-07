@@ -16,16 +16,19 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid=BOPAdditions.modId)
 public class CommonProxy
 {
-	public void preInit() {
+	public void preInit() 
+	{
 		ModMaterials.init();
 		ModItems.init();
 	}
 	
-	public void init() {
+	public void init() 
+	{
 		
 	}
 
-	public void postInit() {
+	public void postInit() 
+	{
 		
 	}
 	
@@ -33,20 +36,25 @@ public class CommonProxy
 	// SERVER EVENTS
 	
 	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
+	public static void registerItems(RegistryEvent.Register<Item> event) 
+	{
 		ModItems.registerItems(event);
 	}
 	
 	@SubscribeEvent
-	public static void onEntitySpawn(EntityJoinWorldEvent event) {
-	    if (event.getEntity() instanceof EntityEnderman) {
+	public static void onEntitySpawn(EntityJoinWorldEvent event) 
+	{
+	    if (event.getEntity() instanceof EntityEnderman) 
+	    {
         	EntityEnderman enderman = (EntityEnderman)event.getEntity();
         	EntityAITaskEntry[] entries = enderman.targetTasks.taskEntries.toArray(new EntityAITaskEntry[enderman.targetTasks.taskEntries.size()]);
         	
-        	for(EntityAITaskEntry entry : entries){
+        	for(EntityAITaskEntry entry : entries)
+        	{
         		EntityAIBase ai = entry.action;
         		
-            	if(ai.getClass().getName().equals("net.minecraft.entity.monster.EntityEnderman$AIFindPlayer")){
+            	if(ai.getClass().getName().equals("net.minecraft.entity.monster.EntityEnderman$AIFindPlayer"))
+            	{
             		enderman.targetTasks.removeTask(ai);
                 	enderman.targetTasks.addTask(1, new ModAIFindPlayer(enderman));
             	}

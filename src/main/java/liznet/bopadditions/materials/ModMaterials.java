@@ -9,14 +9,17 @@ import java.util.List;
 import biomesoplenty.api.enums.BOPGems;
 import biomesoplenty.api.item.*;
 
-public class ModMaterials {
+public class ModMaterials 
+{
 	private static List<ModMaterial> MATERIALS = new ArrayList<ModMaterial>();
 	
-	public static ModMaterial[] getMaterials(){
+	public static ModMaterial[] getMaterials()
+	{
 		return MATERIALS.toArray(new ModMaterial[MATERIALS.size()]);
 	}
 	
-	public static void init(){
+	public static void init()
+	{
 		NonNullList<ItemStack> gems = NonNullList.create();
 		BOPItems.gem.getSubItems(BOPItems.gem.getCreativeTab(), gems);
 		

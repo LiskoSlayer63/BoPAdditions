@@ -6,10 +6,12 @@ import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
 
-public class GemSpade extends ItemSpade implements ICustomEnchantColor {
+public class GemSpade extends ItemSpade implements ICustomEnchantColor 
+{
 	private String gemName;
 	
-	public GemSpade(ModMaterial material) {
+	public GemSpade(ModMaterial material) 
+	{
 		super(material.getToolMaterial());
 		super.setCreativeTab(CreativeTabs.TOOLS);
 		
@@ -20,7 +22,8 @@ public class GemSpade extends ItemSpade implements ICustomEnchantColor {
 	}
 
 	@Override
-	public int getEnchantColor() {
+	public int getEnchantColor() 
+	{
 		return ClientProxy.getEffectColor(gemName.toUpperCase());
 	}
 }
