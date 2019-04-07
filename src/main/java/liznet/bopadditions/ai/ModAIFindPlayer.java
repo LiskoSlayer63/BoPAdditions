@@ -6,17 +6,19 @@ import javax.annotation.Nullable;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import liznet.bopadditions.BOPAdditions;
+import liznet.bopadditions.logging.Logger;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
 public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlayer>
 {
-    private static Method shouldAttackPlayer = ObfuscationReflectionHelper.findMethod(EntityEnderman.class, "func_70821_d", boolean.class, EntityPlayer.class);
     private static Method teleportRandomly = ObfuscationReflectionHelper.findMethod(EntityEnderman.class, "func_70820_n", boolean.class);
     private static Method teleportToEntity = ObfuscationReflectionHelper.findMethod(EntityEnderman.class, "func_70816_c", boolean.class, Entity.class);
 	
@@ -31,7 +33,6 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
         super(entity, EntityPlayer.class, false);
         this.enderman = entity;
         
-    	shouldAttackPlayer.setAccessible(true);
     	teleportRandomly.setAccessible(true);
     	teleportToEntity.setAccessible(true);
     }
@@ -135,21 +136,18 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
     {
     	ItemStack itemstack = player.inventory.armorInventory.get(3);
 
-        if (itemstack.getItem() == Item.getByNameOrId(BOPAdditions.modId + ":amethyst_helmet"))
+        if (itemstack.getItem() == Item.getItemFromBlock(Blocks.PUMPKIN) || itemstack.getItem() == Item.getByNameOrId(BOPAdditions.modId + ":amethyst_helmet"))
         {
             return false;
         }
         else
         {
-        	try 
-        	{
-				return (boolean)ModAIFindPlayer.shouldAttackPlayer.invoke(ModAIFindPlayer.this.enderman, player);
-			} 
-        	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
-        	{
-				BOPAdditions.logger.error(e);
-				return true;
-			}
+            Vec3d vec3d = player.getLook(1.0F).normalize();
+            Vec3d vec3d1 = new Vec3d(this.enderman.posX - player.posX, this.enderman.getEntityBoundingBox().minY + (double)this.enderman.getEyeHeight() - (player.posY + (double)player.getEyeHeight()), this.enderman.posZ - player.posZ);
+            double d0 = vec3d1.length();
+            vec3d1 = vec3d1.normalize();
+            double d1 = vec3d.dotProduct(vec3d1);
+            return d1 > 1.0D - 0.025D / d0 ? player.canEntityBeSeen(this.enderman) : false;
         }
     }
     
@@ -161,7 +159,7 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
 		} 
     	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
     	{
-			BOPAdditions.logger.error(e);
+			Logger.error(e);
 			return false;
 		}
     } 
@@ -174,7 +172,7 @@ public class ModAIFindPlayer extends EntityAINearestAttackableTarget<EntityPlaye
 		} 
     	catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) 
     	{
-			BOPAdditions.logger.error(e);
+			Logger.error(e);
 			return false;
 		}
     }

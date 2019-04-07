@@ -1,8 +1,10 @@
 package liznet.bopadditions.proxy;
 
 import liznet.bopadditions.BOPAdditions;
+import liznet.bopadditions.BOPAdditionsConfig;
 import liznet.bopadditions.ai.ModAIFindPlayer;
 import liznet.bopadditions.items.ModItems;
+import liznet.bopadditions.logging.Logger;
 import liznet.bopadditions.materials.ModMaterials;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAITasks.EntityAITaskEntry;
@@ -18,18 +20,20 @@ public class CommonProxy
 {
 	public void preInit() 
 	{
+		Logger.debug("CommonProxy PreInit!");
+		
 		ModMaterials.init();
 		ModItems.init();
 	}
 	
 	public void init() 
 	{
-		
+		Logger.debug("CommonProxy Init!");
 	}
 
 	public void postInit() 
 	{
-		
+		Logger.debug("CommonProxy PostInit!");
 	}
 	
 
@@ -39,12 +43,14 @@ public class CommonProxy
 	public static void registerItems(RegistryEvent.Register<Item> event) 
 	{
 		ModItems.registerItems(event);
+		
+		Logger.debug("Items registered!");
 	}
 	
 	@SubscribeEvent
 	public static void onEntitySpawn(EntityJoinWorldEvent event) 
 	{
-	    if (event.getEntity() instanceof EntityEnderman) 
+	    if (event.getEntity() instanceof EntityEnderman && BOPAdditionsConfig.ENDERMAN_IGNORE_AMETHYST_HELMET) 
 	    {
         	EntityEnderman enderman = (EntityEnderman)event.getEntity();
         	EntityAITaskEntry[] entries = enderman.targetTasks.taskEntries.toArray(new EntityAITaskEntry[enderman.targetTasks.taskEntries.size()]);
@@ -57,6 +63,8 @@ public class CommonProxy
             	{
             		enderman.targetTasks.removeTask(ai);
                 	enderman.targetTasks.addTask(1, new ModAIFindPlayer(enderman));
+                	
+                	Logger.debug("Replaced AI Task " + ai.getClass().getName() + " > " + ModAIFindPlayer.class.getName() + " for entity " + enderman.getName());
             	}
         	}
 	    }

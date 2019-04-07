@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import biomesoplenty.api.enums.BOPGems;
 import biomesoplenty.api.item.*;
+import liznet.bopadditions.logging.Logger;
 
 public class ModMaterials 
 {
@@ -122,5 +123,7 @@ public class ModMaterials
 		TOPAZ.setRepairItem(gems.get(topazGem.ordinal()));
 		
 		MATERIALS.add(TOPAZ);
+		
+		Logger.debug(MATERIALS.size() + " Materials created!");
 	}
 }

@@ -1,6 +1,6 @@
 package liznet.bopadditions;
 
-import org.apache.logging.log4j.Logger;
+import liznet.bopadditions.logging.Logger;
 import liznet.bopadditions.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,11 +13,9 @@ public class BOPAdditions
 {
 	public static final String modId = "bopadditions";
 	public static final String name = "Biomes O' Plenty Additions";
-	public static final String version = "1.1.0";
-	
-	public static Logger logger;
+	public static final String version = "1.1.1";
 
-	@Mod.Instance(modId)
+	@Mod.Instance(BOPAdditions.modId)
 	public static BOPAdditions instance;
 	
 	@SidedProxy(serverSide = "liznet.bopadditions.proxy.CommonProxy", clientSide = "liznet.bopadditions.proxy.ClientProxy")
@@ -26,7 +24,8 @@ public class BOPAdditions
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		logger = event.getModLog();
+		Logger.init(event.getModLog());
+		Logger.enableDebug(BOPAdditionsConfig.DEBUG);
 		proxy.preInit();
 	}
 
