@@ -13,7 +13,7 @@ public class BOPAdditions {
 
 	public static final String modId = "bopadditions";
 	public static final String name = "Biomes O' Plenty Additions";
-	public static final String version = "1.0.0";
+	public static final String version = "1.1.0";
 	
 	public static Logger logger;
 

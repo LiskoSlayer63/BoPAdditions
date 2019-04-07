@@ -3,10 +3,11 @@
   "modid": "bopadditions",
   "name": "Biomes O' Plenty Additions",
   "description": "Adds various additions for Biomes O' Plenty such as armor and tools.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "mcversion": "1.12.2",
   "authorList": ["LizNet", "LiskoSlayer63", "VestianVon"],
   "credits": "Textures by VestianVon.",
+  "logoFile": "assets/bopadditions/textures/logo.png",
   "dependencies": ["biomesoplenty"]
 }
 ]

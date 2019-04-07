@@ -3,6 +3,7 @@ package liznet.bopadditions.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import liznet.bopadditions.interfaces.ICustomEnchantColor;
 import liznet.bopadditions.materials.ModMaterial;
 import liznet.bopadditions.materials.ModMaterials;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -47,20 +48,7 @@ public class ModItems {
 			ModelLoader.setCustomModelResourceLocation(armor, 0, new ModelResourceLocation(armor.getRegistryName(), "inventory"));
 	}
 	
-	public static boolean isModItem(ItemStack stack){
-		return !stack.isEmpty() && (
-				stack.getItem() instanceof GemAxe || 
-				stack.getItem() instanceof GemHoe || 
-				stack.getItem() instanceof GemPickaxe || 
-				stack.getItem() instanceof GemSpade || 
-				stack.getItem() instanceof GemSword ||
-				stack.getItem() instanceof GemBoots ||
-				stack.getItem() instanceof GemChestplate ||
-				stack.getItem() instanceof GemHelmet ||
-				stack.getItem() instanceof GemLeggings);
-	}
-	
-	public static String getGemName(ItemStack stack) {
-		return isModItem(stack) ? stack.getItem().getRegistryName().getPath().split("_")[0].toUpperCase() : null;
+	public static boolean hasCustomEffect(ItemStack stack){
+		return !stack.isEmpty() && stack.getItem() instanceof ICustomEnchantColor;
 	}
 }

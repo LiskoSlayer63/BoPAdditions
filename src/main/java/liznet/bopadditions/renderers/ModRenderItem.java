@@ -2,7 +2,7 @@ package liznet.bopadditions.renderers;
 
 import java.util.List;
 
-import liznet.bopadditions.proxy.ClientProxy;
+import liznet.bopadditions.interfaces.ICustomEnchantColor;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
@@ -65,7 +65,8 @@ public class ModRenderItem extends RenderItem
 
                 if (stack.hasEffect())
                 {
-                    this.renderEffect(model, ClientProxy.getEffectColor(stack));
+                	int effectColor = stack.getItem() instanceof ICustomEnchantColor ? ((ICustomEnchantColor)stack.getItem()).getEnchantColor() : -8372020;
+                    this.renderEffect(model, effectColor);
                 }
             }
 

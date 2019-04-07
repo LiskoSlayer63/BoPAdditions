@@ -17,7 +17,7 @@ repositories {
 }
 
 group= "liznet.bopadditions"
-version = "1.0.0"
+version = "1.1.0"
 archivesBaseName = "BoPAdditions"
 //bopversion = "1.12.2-7.0.1.2399"
 

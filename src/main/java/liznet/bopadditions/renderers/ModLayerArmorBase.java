@@ -3,6 +3,8 @@ package liznet.bopadditions.renderers;
 import java.util.Map;
 
 import com.google.common.collect.Maps;
+
+import liznet.bopadditions.interfaces.ICustomEnchantColor;
 import liznet.bopadditions.proxy.ClientProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
@@ -87,7 +89,8 @@ public abstract class ModLayerArmorBase<T extends ModelBase> implements LayerRen
                     } // Default
                         if (!this.skipRenderGlint && itemstack.hasEffect())
                         {
-                        	renderEnchantedGlint(renderer, entityLivingBaseIn, model, limbSwing, limbSwingAmount, partialTicks, ageInTicks, netHeadYaw, headPitch, scale, ClientProxy.getEffectColor(itemstack));
+                        	int effectColor = itemstack.getItem() instanceof ICustomEnchantColor ? ((ICustomEnchantColor)itemstack.getItem()).getEnchantColor() : -8372020;
+                        	renderEnchantedGlint(renderer, entityLivingBaseIn, model, limbSwing, limbSwingAmount, partialTicks, ageInTicks, netHeadYaw, headPitch, scale, effectColor);
                         }
                 }
             }
