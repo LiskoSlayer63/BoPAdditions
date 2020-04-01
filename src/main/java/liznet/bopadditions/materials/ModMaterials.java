@@ -42,7 +42,7 @@ public class ModMaterials
 		// harvestLevel, maxUses, efficiency, damage, enchantability)
 		AMETHYST.setToolMaterial(3, 2342, 20.0F, 7.0F, 22);
 		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		AMETHYST.setArmorMaterial(16, new int[]{6, 12, 16, 6}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 5);
+		AMETHYST.setArmorMaterial(68, new int[]{6, 12, 16, 6}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 5);
 		BOPGems amethystGem = BOPGems.valueOf(AMETHYST.name());
 		AMETHYST.setRepairItem(gems.get(amethystGem.ordinal()));
 		
