@@ -13,7 +13,7 @@ public class BOPAdditions
 {
 	public static final String modId = "bopadditions";
 	public static final String name = "Biomes O' Plenty Additions";
-	public static final String version = "1.1.1";
+	public static final String version = "1.1.2";
 
 	@Mod.Instance(BOPAdditions.modId)
 	public static BOPAdditions instance;

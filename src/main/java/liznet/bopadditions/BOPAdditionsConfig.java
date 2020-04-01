@@ -18,7 +18,7 @@ public class BOPAdditionsConfig
 	public static boolean DEBUG = false;
 	
 	@Comment({
-	  "Enable custom enchantment colors on Items.",
+	  "Enable custom enchantment colors on items.",
 	  "(may cause conflicts)"
 	})
 	@Name("Enable Item Enchants")
@@ -26,7 +26,7 @@ public class BOPAdditionsConfig
 	public static boolean ENABLE_ITEM_RENDERER = false;
 	
 	@Comment({
-	  "Enable custom enchantment colors on Armors.",
+	  "Enable custom enchantment colors on armors.",
 	  "(may cause conflicts)"
 	})
 	@Name("Enable Armor Enchants")

@@ -28,14 +28,14 @@ public class ModMaterials
 		// Build MATERIALS
 		
 		ModMaterial AMBER = new ModMaterial("AMBER");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		AMBER.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		AMBER.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems amberGem = BOPGems.valueOf(AMBER.name());
-		AMBER.setRepairItem(gems.get(amberGem.ordinal()));
-		
-		MATERIALS.add(AMBER);
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      AMBER.setToolMaterial(3, 250, 8.0F, 2.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      AMBER.setArmorMaterial(16, new int[]{2, 5, 6, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1);
+	      BOPGems amberGem = BOPGems.valueOf(AMBER.name());
+	      AMBER.setRepairItem(gems.get(amberGem.ordinal()));
+
+	      MATERIALS.add(AMBER);
 		
 		
 		ModMaterial AMETHYST = new ModMaterial("AMETHYST");
@@ -50,79 +50,79 @@ public class ModMaterials
 		
 		
 		ModMaterial EMERALD = new ModMaterial("EMERALD");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		EMERALD.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		EMERALD.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		EMERALD.setRepairItem(new ItemStack(Items.EMERALD));
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      EMERALD.setToolMaterial(3, 1000, 16.0F, 5.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      EMERALD.setArmorMaterial(16, new int[]{3, 5, 7, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
+	      EMERALD.setRepairItem(new ItemStack(Items.EMERALD));
 
-		MATERIALS.add(EMERALD);
-		
-		
-		ModMaterial MALACHITE = new ModMaterial("MALACHITE");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		MALACHITE.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		MALACHITE.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems malachiteGem = BOPGems.valueOf(MALACHITE.name());
-		MALACHITE.setRepairItem(gems.get(malachiteGem.ordinal()));
-		
-		MATERIALS.add(MALACHITE);
-		
-		
-		ModMaterial PERIDOT = new ModMaterial("PERIDOT");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		PERIDOT.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		PERIDOT.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems peridotGem = BOPGems.valueOf(PERIDOT.name());
-		PERIDOT.setRepairItem(gems.get(peridotGem.ordinal()));
-		
-		MATERIALS.add(PERIDOT);
-		
-		
-		ModMaterial RUBY = new ModMaterial("RUBY");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		RUBY.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		RUBY.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems rubyGem = BOPGems.valueOf(RUBY.name());
-		RUBY.setRepairItem(gems.get(rubyGem.ordinal()));
-		
-		MATERIALS.add(RUBY);
-		
-		
-		ModMaterial SAPPHIRE = new ModMaterial("SAPPHIRE");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		SAPPHIRE.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		SAPPHIRE.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems sapphireGem = BOPGems.valueOf(SAPPHIRE.name());
-		SAPPHIRE.setRepairItem(gems.get(sapphireGem.ordinal()));
-		
-		MATERIALS.add(SAPPHIRE);
-		
-		
-		ModMaterial TANZANITE = new ModMaterial("TANZANITE");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		TANZANITE.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		TANZANITE.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems tanzaniteGem = BOPGems.valueOf(TANZANITE.name());
-		TANZANITE.setRepairItem(gems.get(tanzaniteGem.ordinal()));
-		
-		MATERIALS.add(TANZANITE);
-		
-		
-		ModMaterial TOPAZ = new ModMaterial("TOPAZ");
-		// harvestLevel, maxUses, efficiency, damage, enchantability)
-		TOPAZ.setToolMaterial(3, 1561, 12.0F, 3.0F, 22);
-		// durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
-		TOPAZ.setArmorMaterial(16, new int[]{3, 6, 8, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
-		BOPGems topazGem = BOPGems.valueOf(TOPAZ.name());
-		TOPAZ.setRepairItem(gems.get(topazGem.ordinal()));
-		
-		MATERIALS.add(TOPAZ);
+	      MATERIALS.add(EMERALD);
+
+
+	      ModMaterial MALACHITE = new ModMaterial("MALACHITE");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      MALACHITE.setToolMaterial(3, 750, 10.0F, 2.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      MALACHITE.setArmorMaterial(16, new int[]{2, 5, 8, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1);
+	      BOPGems malachiteGem = BOPGems.valueOf(MALACHITE.name());
+	      MALACHITE.setRepairItem(gems.get(malachiteGem.ordinal()));
+
+	      MATERIALS.add(MALACHITE);
+
+
+	      ModMaterial PERIDOT = new ModMaterial("PERIDOT");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      PERIDOT.setToolMaterial(3, 750, 10.0F, 2.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      PERIDOT.setArmorMaterial(16, new int[]{2, 6, 7, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1);
+	      BOPGems peridotGem = BOPGems.valueOf(PERIDOT.name());
+	      PERIDOT.setRepairItem(gems.get(peridotGem.ordinal()));
+
+	      MATERIALS.add(PERIDOT);
+
+
+	      ModMaterial RUBY = new ModMaterial("RUBY");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      RUBY.setToolMaterial(3, 1561, 10.0F, 6.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      RUBY.setArmorMaterial(16, new int[]{2, 6, 8, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
+	      BOPGems rubyGem = BOPGems.valueOf(RUBY.name());
+	      RUBY.setRepairItem(gems.get(rubyGem.ordinal()));
+
+	      MATERIALS.add(RUBY);
+
+
+	      ModMaterial SAPPHIRE = new ModMaterial("SAPPHIRE");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      SAPPHIRE.setToolMaterial(3, 1561, 12.0F, 4.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      SAPPHIRE.setArmorMaterial(16, new int[]{2, 6, 8, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
+	      BOPGems sapphireGem = BOPGems.valueOf(SAPPHIRE.name());
+	      SAPPHIRE.setRepairItem(gems.get(sapphireGem.ordinal()));
+
+	      MATERIALS.add(SAPPHIRE);
+
+
+	      ModMaterial TANZANITE = new ModMaterial("TANZANITE");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      TANZANITE.setToolMaterial(3, 1000, 10.0F, 3.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      TANZANITE.setArmorMaterial(16, new int[]{3, 5, 6, 3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2);
+	      BOPGems tanzaniteGem = BOPGems.valueOf(TANZANITE.name());
+	      TANZANITE.setRepairItem(gems.get(tanzaniteGem.ordinal()));
+
+	      MATERIALS.add(TANZANITE);
+
+
+	      ModMaterial TOPAZ = new ModMaterial("TOPAZ");
+	      // harvestLevel, maxUses, efficiency, damage, enchantability)
+	      TOPAZ.setToolMaterial(3, 1250, 12.0F, 4.0F, 22);
+	      // durability, reductionAmounts { feet, legs, body, head }, enchantability, soundOnEquip, toughness)
+	      TOPAZ.setArmorMaterial(16, new int[]{2, 6, 8, 2}, 5, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1);
+	      BOPGems topazGem = BOPGems.valueOf(TOPAZ.name());
+	      TOPAZ.setRepairItem(gems.get(topazGem.ordinal()));
+
+	      MATERIALS.add(TOPAZ);
 		
 		Logger.debug(MATERIALS.size() + " Materials created!");
 	}
